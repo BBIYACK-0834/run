@@ -115,7 +115,7 @@ class FlyingObstacle {
         this.width = 50;  // 공중 장애물 크기
         this.height = 40;
         this.x = canvas.width;
-        this.y = 120;  // 공중에 위치하도록 y 값 조정
+        this.y = 220;  // 공중에 위치하도록 y 값 조정
         this.speed = cactusSpeed; // 동일한 속도로 이동
     }
     draw() {
@@ -164,7 +164,7 @@ function frameAction() {
     // 5초(300프레임)마다 장애물 속도 및 생성 간격 증가
     if (timer % speedIncreaseInterval === 0) {
         cactusSpeed += 1; // 장애물 속도를 증가시킴
-        minCactusInterval = Math.max(20, minCactusInterval - 5); // 최소 생성 시간 감소, 최소 20
+        minCactusInterval = Math.max(30, minCactusInterval - 5); // 최소 생성 시간 감소, 최소 20
         maxCactusInterval = Math.max(40, maxCactusInterval - 10); // 최대 생성 시간 감소, 최소 40
     }
 
